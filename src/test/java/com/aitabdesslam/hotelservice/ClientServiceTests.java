@@ -7,14 +7,12 @@ import com.aitabdesslam.hotelservice.mappers.ClientMapper;
 import com.aitabdesslam.hotelservice.repositories.ClientRepository;
 import com.aitabdesslam.hotelservice.service.ClientServiceImpl;
 import com.aitabdesslam.hotelservice.exceptions.ClientNotFoundException;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
@@ -40,7 +38,7 @@ public class ClientServiceTests {
 
         // Set up mock behavior for clientRepository
         when(clientRepository.save(any(Client.class))).thenReturn(new Client());
-        when(clientRepository.findByEmail("oussama@tahri.com")).thenReturn(new Client());
+        when(clientRepository.findByEmail("aitabdesslam@gmail.com")).thenReturn(new Client());
     }
 
     @Test
@@ -61,7 +59,7 @@ public class ClientServiceTests {
     @Test
     public void testAuthenticateClient_ValidCredentials() throws ClientNotFoundException {
         // Arrange
-        String email    = "oussama@tahri.com";
+        String email    = "aitabdesslam@gmail.com";
         String password = "correctpassword";
 
         // Create a mock Client object with the provided email and password
@@ -84,7 +82,7 @@ public class ClientServiceTests {
     @Test(expected = ClientNotFoundException.class)
     public void testAuthenticateClient_InvalidCredentials() throws ClientNotFoundException {
         // Arrange
-        String email = "invalid@tahri.com";
+        String email = "invalid@aitabdesslam.com";
         String password = "invalidPassword";
         when(clientRepository.findByEmail(email)).thenReturn(null);
 
