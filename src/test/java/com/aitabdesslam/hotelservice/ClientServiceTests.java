@@ -57,10 +57,11 @@ public class ClientServiceTests {
         verify(clientRepository, times(1)).save(any(Client.class)); // Verify that clientRepository.save is called once with any Client argument
     }
 
+
     @Test
     public void testAuthenticateClient_ValidCredentials() throws ClientNotFoundException {
         // Arrange
-        String email = "oussama@tahri.com";
+        String email    = "oussama@tahri.com";
         String password = "correctpassword";
 
         // Create a mock Client object with the provided email and password
@@ -79,9 +80,6 @@ public class ClientServiceTests {
         assertEquals(email, authenticatedClientDTO.getEmail());
         assertEquals(password, authenticatedClientDTO.getPassword());
     }
-
-
-
 
     @Test(expected = ClientNotFoundException.class)
     public void testAuthenticateClient_InvalidCredentials() throws ClientNotFoundException {

@@ -8,6 +8,7 @@ class HotelServiceApplicationTests {
 
     @Test
     void contextLoads() {
+        
     }
 
 }
