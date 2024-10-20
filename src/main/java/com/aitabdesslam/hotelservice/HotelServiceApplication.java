@@ -35,9 +35,9 @@ public class HotelServiceApplication {
             // Test cases for ClientService
             ClientDTO client1 = new ClientDTO();
             client1.setId(1L);
-            client1.setFirstName("Oussama");
-            client1.setLastName("Tahri");
-            client1.setEmail("oussama@tahri.com");
+            client1.setFirstName("Med");
+            client1.setLastName("Abde");
+            client1.setEmail("med@abde.com");
             client1.setPassword("password1");
             try {
                 clientService.registerClient(client1);
@@ -47,9 +47,9 @@ public class HotelServiceApplication {
 
             ClientDTO client2 = new ClientDTO();
             client2.setId(2L);
-            client2.setFirstName("Marouane");
-            client2.setLastName("Bouchtaoui");
-            client2.setEmail("marouane@bouchtaoui.com");
+            client2.setFirstName("Mohamed");
+            client2.setLastName("Ait");
+            client2.setEmail("mohamedait@gmail.com");
             client2.setPassword("password2");
             try {
                 clientService.registerClient(client2);
