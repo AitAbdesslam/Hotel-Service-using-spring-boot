@@ -23,8 +23,8 @@ public class Reservation {
     @Future(message = "Check-out date must be in the future")
     private LocalDate checkOUT;
 
-//    @Column(nullable = false)
-//    private double totalCost;
+    // @Column(nullable = false)
+    // private double totalCost;
     @Enumerated(EnumType.STRING)
     private ReservationStatus status;
     @ManyToOne(fetch = FetchType.LAZY)
